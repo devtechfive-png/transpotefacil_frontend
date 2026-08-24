@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Transporte Fácil</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+
+
+    <header class="header-dashboard">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                🚌
+            </div>
+
+            <div>
+                <h1>Transporte Fácil</h1>
+
+                <span>
+                    Painel Administrativo
+                </span>
+            </div>
+
+        </div>
+
+        <button
+            type="button"
+            class="btn-sair"
+            id="btnSair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+
+
+    <main class="dashboard-container">
+
+
+        <!-- BOAS-VINDAS -->
+
+        <section class="welcome-card">
+
+            <span class="welcome-label">
+                PAINEL ADMINISTRATIVO
+            </span>
+
+            <h2>
+                Olá, Administrador! 👋
+            </h2>
+
+            <p>
+                Gerencie as informações do Transporte Fácil.
+            </p>
+
+        </section>
+
+
+
+
+        <section class="resumo-grid">
+
+
+            <!-- ROTAS -->
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    🗺️
+                </div>
+
+                <div class="resumo-info">
+
+                    <span>
+                        Rotas
+                    </span>
+
+                    <strong id="totalRotas">
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- VEÍCULOS -->
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    🚌
+                </div>
+
+                <div class="resumo-info">
+
+                    <span>
+                        Veículos
+                    </span>
+
+                    <strong id="totalVeiculos">
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- HORÁRIOS -->
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    🕐
+                </div>
+
+                <div class="resumo-info">
+
+                    <span>
+                        Horários
+                    </span>
+
+                    <strong id="totalHorarios">
+                        8
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- AGÊNCIAS -->
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    🏢
+                </div>
+
+                <div class="resumo-info">
+
+                    <span>
+                        Agências
+                    </span>
+
+                    <strong id="totalAgencias">
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="gerenciamento">
+
+            <div class="section-title">
+
+                <h2>
+                    Gerenciamento
+                </h2>
+
+                <p>
+                    Acesse as principais funções administrativas.
+                </p>
+
+            </div>
+
+
+            <div class="gerenciamento-grid">
+
+                <button
+                    type="button"
+                    class="gerenciamento-card"
+                    id="btnGerenciarRotas"
+                >
+
+                    <div class="gerenciamento-icon">
+                        🗺️
+                    </div>
+
+                    <div class="gerenciamento-text">
+
+                        <strong>
+                            Gerenciar Rotas
+                        </strong>
+
+                        <span>
+                            Adicionar, editar e visualizar rotas
+                        </span>
+
+                    </div>
+
+                    <span class="seta">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section
+            class="rotas-section"
+            id="secaoRotas"
+        >
+
+            <div class="rotas-header">
+
+                <div>
+
+                    <h2>
+                        Rotas cadastradas
+                    </h2>
+
+                    <p>
+                        Rotas disponíveis no sistema.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-adicionar"
+                    id="btnAdicionarRota"
+                >
+                    + Adicionar rota
+                </button>
+
+            </div>
+
+
+            <!-- ROTAS -->
+
+            <div id="listaRotas"></div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <div
+        class="modal-overlay"
+        id="modalRota"
+        hidden
+    >
+
+        <div class="modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="welcome-label">
+                        GERENCIAR ROTA
+                    </span>
+
+                    <h2 id="tituloModal">
+                        Adicionar nova rota
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-fechar"
+                    id="btnFecharModal"
+                    aria-label="Fechar"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <form id="formRota">
+
+
+                <div class="campo">
+
+                    <label for="empresa">
+                        Empresa / Agência *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="empresa"
+                        placeholder="Nome da empresa"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="campo">
+
+                        <label for="origem">
+                            Origem *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="origem"
+                            placeholder="Cidade de origem"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="destino">
+                            Destino *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destino"
+                            placeholder="Cidade de destino"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="via">
+                        Via
+                    </label>
+
+                    <input
+                        type="text"
+                        id="via"
+                        placeholder="Ex.: União"
+                    >
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="campo">
+
+                        <label for="tipoTransporte">
+                            Tipo de transporte *
+                        </label>
+
+                        <select
+                            id="tipoTransporte"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="Ônibus">
+                                Ônibus
+                            </option>
+
+                            <option value="Van">
+                                Van
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="horarios">
+                            Horários
+                        </label>
+
+                        <input
+                            type="text"
+                            id="horarios"
+                            placeholder="Ex.: 06:00, 12:00"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="paradas">
+                        Paradas
+                    </label>
+
+                    <input
+                        type="text"
+                        id="paradas"
+                        placeholder="Ex.: União, Altos"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="informacoes">
+                        Informações adicionais
+                    </label>
+
+                    <textarea
+                        id="informacoes"
+                        rows="3"
+                        placeholder="Informações sobre a rota..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- AÇÕES -->
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        id="btnCancelar"
+                    >
+                        Cancelar
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+                        ✓ Salvar rota
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
