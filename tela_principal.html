@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transporte Fácil</title>
+
+    <link rel="stylesheet" href="css/tela_principal.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+
+        <button class="btn-voltar" id="btnVoltar" title="Voltar">
+            ←
+        </button>
+
+        <h1>Transporte Fácil</h1>
+
+        <button class="btn-menu" id="btnMenu" title="Abrir menu">
+            ☰
+        </button>
+
+        <!-- MENU -->
+        <nav class="menu" id="menu">
+
+            <button class="item-menu" id="btnLogin">
+                <span>🔐</span>
+                <span>Login</span>
+            </button>
+
+            <button class="item-menu" id="btnCompartilhar">
+                <span>↗</span>
+                <span>Compartilhar</span>
+            </button>
+
+            <hr>
+
+            <button class="item-menu item-sair" id="btnSair">
+                <span>↪</span>
+                <span>Sair</span>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo">
+
+        <section class="introducao">
+
+            <h2>Linhas disponíveis</h2>
+
+            <p>
+                Encontre sua rota e consulte as informações.
+            </p>
+
+        </section>
+
+
+        <!-- PESQUISA -->
+        <section class="area-pesquisa">
+
+            <div class="campo-pesquisa">
+
+                <span class="icone-pesquisa">🔎</span>
+
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Buscar linha, destino ou via..."
+                    autocomplete="off"
+                >
+
+                <button
+                    class="btn-limpar"
+                    id="btnLimpar"
+                    title="Limpar pesquisa"
+                >
+                    ×
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TÍTULO DAS ROTAS -->
+        <section class="titulo-rotas">
+
+            <h3>Rotas</h3>
+
+            <span id="quantidadeRotas">
+                4 linhas
+            </span>
+
+        </section>
+
+
+        <!-- LISTA DE ROTAS -->
+        <section class="lista-rotas" id="listaRotas">
+
+
+            <!-- ROTA 1 -->
+            <article
+                class="card-rota"
+                data-rota="sales"
+                data-origem="Lagoa Alegre"
+                data-destino="Teresina"
+                data-via="União"
+            >
+
+                <div class="cabecalho-rota">
+
+                    <div class="icone-rota">
+                        🚌
+                    </div>
+
+                    <div class="nome-rota">
+
+                        <h4>Sales</h4>
+
+                        <p>
+                            Lagoa Alegre → Teresina
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="informacoes-rota">
+
+                    <div class="informacao">
+
+                        <span>ORIGEM</span>
+
+                        <strong>Lagoa Alegre</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>DESTINO</span>
+
+                        <strong>Teresina</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>VIA</span>
+
+                        <strong>União</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>TRANSPORTE</span>
+
+                        <strong>🚌 Transporte</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dias-funcionamento">
+
+                    <span>DIAS DE FUNCIONAMENTO</span>
+
+                    <strong>
+                        📅 Segunda, Terça, Quarta, Quinta, Sexta
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-rota="sales"
+                >
+                    Ver informações da rota
+                    <span>→</span>
+                </button>
+
+            </article>
+
+
+
+            <!-- ROTA 2 -->
+            <article
+                class="card-rota"
+                data-rota="j-araujo"
+                data-origem="Lagoa Alegre"
+                data-destino="Teresina"
+                data-via="União"
+            >
+
+                <div class="cabecalho-rota">
+
+                    <div class="icone-rota">
+                        🚌
+                    </div>
+
+                    <div class="nome-rota">
+
+                        <h4>J Araújo</h4>
+
+                        <p>
+                            Lagoa Alegre → Teresina
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="informacoes-rota">
+
+                    <div class="informacao">
+
+                        <span>ORIGEM</span>
+
+                        <strong>Lagoa Alegre</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>DESTINO</span>
+
+                        <strong>Teresina</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>VIA</span>
+
+                        <strong>União</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>TRANSPORTE</span>
+
+                        <strong>🚌 Transporte</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dias-funcionamento">
+
+                    <span>DIAS DE FUNCIONAMENTO</span>
+
+                    <strong>
+                        📅 Segunda, Terça, Quarta, Quinta, Sexta
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-rota="j-araujo"
+                >
+                    Ver informações da rota
+                    <span>→</span>
+                </button>
+
+            </article>
+
+
+
+            <!-- ROTA 3 -->
+            <article
+                class="card-rota"
+                data-rota="transpiaui"
+                data-origem="Lagoa Alegre"
+                data-destino="Teresina"
+                data-via="União"
+            >
+
+                <div class="cabecalho-rota">
+
+                    <div class="icone-rota">
+                        🚌
+                    </div>
+
+                    <div class="nome-rota">
+
+                        <h4>Trans Piauí</h4>
+
+                        <p>
+                            Lagoa Alegre → Teresina
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="informacoes-rota">
+
+                    <div class="informacao">
+
+                        <span>ORIGEM</span>
+
+                        <strong>Lagoa Alegre</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>DESTINO</span>
+
+                        <strong>Teresina</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>VIA</span>
+
+                        <strong>União</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>TRANSPORTE</span>
+
+                        <strong>🚌 Transporte</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dias-funcionamento">
+
+                    <span>DIAS DE FUNCIONAMENTO</span>
+
+                    <strong>
+                        📅 Segunda, Terça, Quarta, Quinta, Sexta
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-rota="transpiaui"
+                >
+                    Ver informações da rota
+                    <span>→</span>
+                </button>
+
+            </article>
+
+
+
+            <!-- ROTA 4 -->
+            <article
+                class="card-rota"
+                data-rota="frota"
+                data-origem="Lagoa Alegre"
+                data-destino="Teresina"
+                data-via="União"
+            >
+
+                <div class="cabecalho-rota">
+
+                    <div class="icone-rota">
+                        🚌
+                    </div>
+
+                    <div class="nome-rota">
+
+                        <h4>Frota</h4>
+
+                        <p>
+                            Lagoa Alegre → Teresina
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="informacoes-rota">
+
+                    <div class="informacao">
+
+                        <span>ORIGEM</span>
+
+                        <strong>Lagoa Alegre</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>DESTINO</span>
+
+                        <strong>Teresina</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>VIA</span>
+
+                        <strong>União</strong>
+
+                    </div>
+
+
+                    <div class="informacao">
+
+                        <span>TRANSPORTE</span>
+
+                        <strong>🚌 Transporte</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dias-funcionamento">
+
+                    <span>DIAS DE FUNCIONAMENTO</span>
+
+                    <strong>
+                        📅 Segunda, Terça, Quarta, Quinta, Sexta
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="btn-detalhes"
+                    data-rota="frota"
+                >
+                    Ver informações da rota
+                    <span>→</span>
+                </button>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- MENSAGEM QUANDO NÃO ENCONTRAR ROTA -->
+        <div
+            class="sem-resultados"
+            id="semResultados"
+        >
+            <span>🔎</span>
+
+            <h3>Nenhuma rota encontrada</h3>
+
+            <p>
+                Tente pesquisar pelo nome da linha ou destino.
+            </p>
+        </div>
+
+    </main>
+
+
+    <script src="js/tela_principal.js"></script>
+
+</body>
+</html>
