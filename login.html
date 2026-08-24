@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Transporte Fácil</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <h1>Transporte Fácil</h1>
+
+            <p class="subtitulo">Acesse sua conta</p>
+
+            <!-- SELEÇÃO DO TIPO DE LOGIN -->
+            <div class="tipo-login">
+
+                <button
+                    type="button"
+                    id="btnUsuario"
+                    class="tipo-btn ativo"
+                >
+                    👤 Usuário
+                </button>
+
+                <button
+                    type="button"
+                    id="btnAdministrador"
+                    class="tipo-btn"
+                >
+                    🛡️ Administrador
+                </button>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+            <form id="formLogin">
+
+                <div class="campo">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="senha">Senha</label>
+
+                    <div class="senha-container">
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="mostrarSenha"
+                            class="btn-senha"
+                            aria-label="Mostrar senha"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-entrar"
+                >
+                    Entrar
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <!-- ÁREA DE CADASTRO DO USUÁRIO -->
+            <div
+                id="areaCadastro"
+                class="area-cadastro"
+            >
+
+                <p>Ainda não possui uma conta?</p>
+
+                <a href="cadastro.html">
+                    Crie sua conta →
+                </a>
+
+            </div>
+
+
+            <!-- ÁREA DO RESPONSÁVEL -->
+            <div class="responsavel-acesso">
+    <p>Você é responsável por alguma empresa?</p>
+
+    <a href="area_responsavel.html">
+        Acesse sua área de responsável →
+    </a>
+</div>
+
+
+            <!-- MENSAGEM -->
+            <p
+                id="mensagem"
+                class="mensagem"
+            ></p>
+
+
+            <!-- VOLTAR -->
+            <button
+                type="button"
+                id="btnVoltar"
+                class="btn-voltar"
+            >
+                ← Voltar
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

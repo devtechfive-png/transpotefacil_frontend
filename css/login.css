@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef8f3;
+    color: #123c32;
+    min-height: 100vh;
+}
+
+
+
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+
+    background: #ffffff;
+
+    padding: 38px 32px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 70, 45, 0.10);
+}
+
+
+
+.login-card h1 {
+    text-align: center;
+
+    color: #07894d;
+
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    text-align: center;
+
+    color: #71817c;
+
+    font-size: 14px;
+
+    margin-bottom: 28px;
+}
+
+
+
+
+.tipo-login {
+    display: flex;
+
+    background: #edf3f0;
+
+    border-radius: 12px;
+
+    padding: 4px;
+
+    margin-bottom: 28px;
+}
+
+.tipo-btn {
+    width: 50%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 13px 8px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    color: #52635d;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.tipo-btn:hover {
+    color: #07894d;
+}
+
+.tipo-btn.ativo {
+    background: #ffffff;
+
+    color: #07894d;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #163f34;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #d7e4df;
+
+    border-radius: 11px;
+
+    background: #eef4ff;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus {
+    border-color: #08a85b;
+
+    box-shadow:
+        0 0 0 3px rgba(8, 168, 91, 0.10);
+}
+
+
+
+.senha-container {
+    position: relative;
+}
+
+.senha-container input {
+    padding-right: 45px;
+}
+
+.btn-senha {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+
+
+.btn-entrar {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #07894d,
+        #0caf5d
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 8px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 137, 77, 0.18);
+
+    transition: 0.2s;
+}
+
+.btn-entrar span {
+    margin-left: 8px;
+}
+
+.btn-entrar:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(0, 137, 77, 0.25);
+}
+
+
+
+.area-cadastro {
+    text-align: center;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e2e8e5;
+}
+
+.area-cadastro p {
+    font-size: 13px;
+
+    color: #75847f;
+
+    margin-bottom: 7px;
+}
+
+.area-cadastro a {
+    color: #07894d;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.area-cadastro a:hover {
+    color: #056f3e;
+
+    text-decoration: underline;
+}
+
+
+
+
+.responsavel-acesso {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.responsavel-acesso p {
+    color: #71817c;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.responsavel-acesso a,
+.responsavel-acesso a:link,
+.responsavel-acesso a:visited {
+    display: inline-block;
+
+    color: #07894d;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s,
+        text-decoration 0.2s;
+}
+
+.responsavel-acesso a:hover {
+    color: #056f3e;
+
+    text-decoration: underline;
+}
+
+.responsavel-acesso a:focus {
+    outline: none;
+
+    color: #056f3e;
+}
+
+
+
+.mensagem {
+    text-align: center;
+
+    font-size: 13px;
+
+    min-height: 20px;
+
+    margin-top: 15px;
+}
+
+.mensagem.erro {
+    color: #d9342b;
+}
+
+.mensagem.sucesso {
+    color: #07894d;
+}
+
+
+
+.btn-voltar {
+    display: block;
+
+    margin: 28px auto 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #5f716b;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+    color: #07894d;
+}
+
+
+
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 18px;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+
+        border-radius: 16px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+
+    .tipo-btn {
+        font-size: 13px;
+    }
+
+    .responsavel-acesso a {
+        font-size: 13px;
+    }
+
+    .btn-entrar {
+        height: 48px;
+    }
+}
