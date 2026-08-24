@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acesso do Responsável - Transporte Fácil</title>
+
+    <link rel="stylesheet" href="css/area_responsavel.css">
+</head>
+
+<body>
+    <header class="header-responsavel">
+
+        <div class="header-esquerda">
+
+            <button
+                type="button"
+                class="btn-voltar"
+                id="btnVoltar"
+                aria-label="Voltar"
+            >
+                ←
+            </button>
+
+            <div class="icone-cadeado">
+                🔐
+            </div>
+
+            <div class="titulo-header">
+
+                <h1>Acesso do responsável</h1>
+
+                <span>Transporte Fácil</span>
+
+            </div>
+
+        </div>
+
+    </header>
+    <main class="area-container">
+
+        <section class="area-introducao">
+
+            <span class="area-label">
+                ÁREA DO RESPONSÁVEL
+            </span>
+
+            <h2>
+                Acesse sua rota
+            </h2>
+
+            <p>
+                Informe o e-mail cadastrado e o código de acesso recebido.
+            </p>
+
+        </section>
+        <section class="acesso-card">
+
+            <form id="formResponsavel" novalidate>
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ex.: responsavel@empresa.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <small
+                        class="mensagem-erro"
+                        id="erroEmail"
+                    ></small>
+
+                </div>
+                <div class="campo">
+
+                    <label for="codigo">
+                        Código de acesso
+                    </label>
+
+                    <input
+                        type="text"
+                        id="codigo"
+                        name="codigo"
+                        placeholder="EX.: HLVJSC"
+                        maxlength="6"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <small class="campo-ajuda">
+                        Digite o código de 6 caracteres recebido por e-mail.
+                    </small>
+
+                    <small
+                        class="mensagem-erro"
+                        id="erroCodigo"
+                    ></small>
+
+                </div>
+                <button
+                    type="submit"
+                    class="btn-acessar"
+                    id="btnAcessar"
+                >
+                    Acessar minha rota
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/area_responsavel.js"></script>
+
+</body>
+
+</html>

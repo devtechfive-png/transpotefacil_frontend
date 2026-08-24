@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adicionar nova rota - Transporte Fácil</title>
+
+    <link rel="stylesheet" href="css/criar_rota.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="cabecalho">
+
+            <div>
+                <span class="titulo-pequeno">
+                    NOVA ROTA
+                </span>
+
+                <h1>
+                    Adicionar nova rota
+                </h1>
+
+                <p>
+                    Cadastre uma nova rota no Transporte Fácil.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="btn-fechar"
+                id="btnFechar"
+                aria-label="Voltar"
+            >
+                ×
+            </button>
+
+        </header>
+
+
+        <form id="formCriarRota" class="formulario">
+
+
+            <div class="campo campo-completo">
+
+                <label for="empresa">
+                    Empresa / Agência <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    placeholder="Nome da empresa ou agência"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo campo-completo">
+
+                <label for="emailResponsavel">
+                    E-mail do responsável <span>*</span>
+                </label>
+
+                <input
+                    type="email"
+                    id="emailResponsavel"
+                    name="emailResponsavel"
+                    placeholder="responsavel@email.com"
+                    required
+                >
+
+                <small>
+                    Esse e-mail será utilizado junto ao código de acesso da rota.
+                </small>
+
+            </div>
+
+            <div class="linha-dois">
+
+                <div class="campo">
+
+                    <label for="origem">
+                        Origem <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="origem"
+                        name="origem"
+                        placeholder="Cidade de origem"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="destino">
+                        Destino <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="destino"
+                        name="destino"
+                        placeholder="Cidade de destino"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="campo campo-completo">
+
+                <label for="via">
+                    Via
+                </label>
+
+                <input
+                    type="text"
+                    id="via"
+                    name="via"
+                    placeholder="Ex.: José de Freitas"
+                >
+
+                <small>
+                    Informe a via ou o caminho principal utilizado pela rota.
+                </small>
+
+            </div>
+
+            <section class="secao-paradas">
+
+                <div class="titulo-secao">
+
+                    <div>
+
+                        <label>
+                            Paradas
+                        </label>
+
+                        <small>
+                            Adicione as cidades ou localidades onde o ônibus ou van fará parada.
+                        </small>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-adicionar"
+                        id="btnAdicionarParada"
+                    >
+                        + Adicionar parada
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="listaParadas"
+                    class="lista-paradas"
+                >
+
+                    <div class="parada-item">
+
+                        <input
+                            type="text"
+                            name="paradas[]"
+                            placeholder="Nome da cidade ou localidade"
+                        >
+
+                        <button
+                            type="button"
+                            class="btn-remover-parada"
+                            title="Remover parada"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="campo campo-completo">
+
+                <label for="tipoTransporte">
+                    Tipo de transporte <span>*</span>
+                </label>
+
+                <select
+                    id="tipoTransporte"
+                    name="tipoTransporte"
+                    required
+                >
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="onibus">
+                        Ônibus
+                    </option>
+
+                    <option value="van">
+                        Van
+                    </option>
+
+                </select>
+
+            </div>
+
+            <section class="secao-dias">
+
+                <div class="titulo-secao">
+
+                    <div>
+
+                        <label>
+                            Dias de funcionamento <span>*</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dias-grid">
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="segunda"
+                        >
+
+                        <span>
+                            Segunda
+                        </span>
+
+                    </label>
+
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="terca"
+                        >
+
+                        <span>
+                            Terça
+                        </span>
+
+                    </label>
+
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="quarta"
+                        >
+
+                        <span>
+                            Quarta
+                        </span>
+
+                    </label>
+
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="quinta"
+                        >
+
+                        <span>
+                            Quinta
+                        </span>
+
+                    </label>
+
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="sexta"
+                        >
+
+                        <span>
+                            Sexta
+                        </span>
+
+                    </label>
+
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="sabado"
+                        >
+
+                        <span>
+                            Sábado
+                        </span>
+
+                    </label>
+
+
+                    <label class="dia-item">
+
+                        <input
+                            type="checkbox"
+                            name="dias[]"
+                            value="domingo"
+                        >
+
+                        <span>
+                            Domingo
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+            <section class="secao-horarios">
+
+                <div class="titulo-secao">
+
+                    <div>
+
+                        <label>
+                            Horários das viagens <span>*</span>
+                        </label>
+
+                        <small>
+                            Adicione quantos horários forem necessários.
+                        </small>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-adicionar"
+                        id="btnAdicionarHorario"
+                    >
+                        + Adicionar horário
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="listaHorarios"
+                    class="lista-horarios"
+                >
+
+                    <div class="horario-item">
+
+                        <div class="horario-campo">
+
+                            <label>
+                                Saída
+                            </label>
+
+                            <input
+                                type="time"
+                                name="saida[]"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="horario-campo">
+
+                            <label>
+                                Chegada
+                            </label>
+
+                            <input
+                                type="time"
+                                name="chegada[]"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-remover-horario"
+                            title="Remover horário"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <div class="campo campo-completo">
+
+                <label for="informacoes">
+                    Informações adicionais
+                </label>
+
+                <textarea
+                    id="informacoes"
+                    name="informacoes"
+                    rows="4"
+                    placeholder="Informações adicionais sobre a rota..."
+                ></textarea>
+
+            </div>
+
+            <div class="acoes-formulario">
+
+                <button
+                    type="button"
+                    class="btn-cancelar"
+                    id="btnCancelar"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn-salvar"
+                >
+                    Salvar rota
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <script src="js/criar_rota.js"></script>
+
+</body>
+
+</html> 
