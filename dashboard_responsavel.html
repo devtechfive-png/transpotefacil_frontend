@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Rota - Transporte Fácil</title>
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard_responsavel.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header class="header-responsavel">
+
+        <div class="header-esquerda">
+
+            <button
+                type="button"
+                class="btn-voltar"
+                id="btnVoltar"
+                aria-label="Voltar"
+            >
+                ←
+            </button>
+
+            <div class="header-logo">
+                🚌
+            </div>
+
+            <div class="header-titulo">
+
+                <h1>
+                    Minha rota
+                </h1>
+
+                <span>
+                    Transporte Fácil
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="btn-sair"
+            id="btnSair"
+        >
+            Sair
+        </button>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="responsavel-container">
+
+
+        <!-- INTRODUÇÃO -->
+
+        <section class="introducao">
+
+            <span class="etiqueta">
+                ÁREA DO RESPONSÁVEL
+            </span>
+
+            <h2>
+                Gerencie sua rota
+            </h2>
+
+            <p>
+                Consulte e atualize as informações cadastradas no Transporte Fácil.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             CARD PRINCIPAL
+        ================================================== -->
+
+        <section class="rota-card">
+
+
+            <!-- CABEÇALHO DA ROTA -->
+
+            <div class="rota-cabecalho">
+
+                <div>
+
+                    <span class="rota-label">
+                        ROTA CADASTRADA
+                    </span>
+
+                    <h3 id="empresaNome">
+                        Sales
+                    </h3>
+
+                </div>
+
+                <span class="status ativo">
+                    ● Ativa
+                </span>
+
+            </div>
+
+
+            <div class="separador"></div>
+
+
+            <!-- =================================================
+                 INFORMAÇÕES PRINCIPAIS
+            ================================================== -->
+
+            <div class="informacoes-grid">
+
+
+                <!-- ORIGEM -->
+
+                <div class="informacao-box">
+
+                    <div class="informacao-icone">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Origem
+                        </span>
+
+                        <strong id="origem">
+                            Lagoa Alegre
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINO -->
+
+                <div class="informacao-box">
+
+                    <div class="informacao-icone">
+                        🏁
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Destino
+                        </span>
+
+                        <strong id="destino">
+                            Teresina
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIA -->
+
+                <div class="informacao-box">
+
+                    <div class="informacao-icone">
+                        🛣️
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Via
+                        </span>
+
+                        <strong id="via">
+                            União
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPO DE TRANSPORTE -->
+
+                <div class="informacao-box">
+
+                    <div class="informacao-icone">
+                        🚌
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Tipo de transporte
+                        </span>
+
+                        <strong id="tipoTransporte">
+                            Ônibus
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PARADAS
+            ================================================== -->
+
+            <div class="bloco-informacao">
+
+                <div class="bloco-titulo">
+
+                    <span class="bloco-icone">
+                        📍
+                    </span>
+
+                    <span>
+                        Paradas
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="paradas"
+                    id="paradasRota"
+                >
+
+                    <span class="parada">
+                        União
+                    </span>
+
+                    <span class="parada">
+                        José de Freitas
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 DIAS
+            ================================================== -->
+
+            <div class="bloco-informacao">
+
+                <div class="bloco-titulo">
+
+                    <span class="bloco-icone">
+                        📅
+                    </span>
+
+                    <span>
+                        Dias de funcionamento
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="dias"
+                    id="diasFuncionamento"
+                >
+
+                    <span>
+                        Segunda
+                    </span>
+
+                    <span>
+                        Terça
+                    </span>
+
+                    <span>
+                        Quarta
+                    </span>
+
+                    <span>
+                        Quinta
+                    </span>
+
+                    <span>
+                        Sexta
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 HORÁRIOS
+            ================================================== -->
+
+            <div class="bloco-informacao">
+
+                <div class="bloco-titulo">
+
+                    <span class="bloco-icone">
+                        🕐
+                    </span>
+
+                    <span>
+                        Horários
+                    </span>
+
+                </div>
+
+
+                <div class="horarios">
+
+                    <div class="horario">
+
+                        <span>
+                            Horário 1
+                        </span>
+
+                        <strong>
+                            08:00
+                        </strong>
+
+                        <span class="seta-horario">
+                            →
+                        </span>
+
+                        <strong>
+                            10:30
+                        </strong>
+
+                    </div>
+
+
+                    <div class="horario">
+
+                        <span>
+                            Horário 2
+                        </span>
+
+                        <strong>
+                            13:00
+                        </strong>
+
+                        <span class="seta-horario">
+                            →
+                        </span>
+
+                        <strong>
+                            15:00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 INFORMAÇÕES ADICIONAIS
+            ================================================== -->
+
+            <div class="bloco-informacao">
+
+                <div class="bloco-titulo">
+
+                    <span class="bloco-icone">
+                        ℹ️
+                    </span>
+
+                    <span>
+                        Informações adicionais
+                    </span>
+
+                </div>
+
+                <p
+                    class="informacao-adicional"
+                    id="informacoesAdicionais"
+                >
+                    Aos sábados e domingos funciona pela manhã.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 AÇÕES
+            ================================================== -->
+
+            <div class="acoes">
+
+                <button
+                    type="button"
+                    class="btn-editar"
+                    id="btnEditar"
+                >
+                    ✏️ Editar rota
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-excluir"
+                    id="btnExcluir"
+                >
+                    🗑️ Excluir rota
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODAL DE EXCLUSÃO
+    ====================================================== -->
+
+    <div
+        class="modal-overlay"
+        id="modalExcluir"
+    >
+
+        <div class="modal">
+
+            <div class="modal-icone">
+                ⚠️
+            </div>
+
+            <h3>
+                Excluir rota?
+            </h3>
+
+            <p>
+                Tem certeza de que deseja excluir esta rota?
+                Essa ação não poderá ser desfeita.
+            </p>
+
+            <div class="modal-acoes">
+
+                <button
+                    type="button"
+                    class="btn-cancelar"
+                    id="btnCancelarExclusao"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-confirmar-exclusao"
+                    id="btnConfirmarExclusao"
+                >
+                    Excluir rota
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/dashboard_responsavel.js"></script>
+
+</body>
+
+</html>

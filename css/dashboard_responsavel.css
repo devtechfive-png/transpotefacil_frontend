@@ -1,0 +1,1392 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f8f6;
+
+    color: #123c32;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.header-responsavel {
+
+    width: 100%;
+    height: 65px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #087d49,
+            #10a35c
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    color: white;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.12);
+}
+
+.header-esquerda {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.btn-voltar {
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+
+    background:
+        rgba(255, 255, 255, 0.27);
+
+    transform:
+        translateX(-2px);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.header-logo {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.header-titulo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.header-titulo h1 {
+
+    font-size: 20px;
+}
+
+.header-titulo span {
+
+    font-size: 11px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   SAIR
+========================================================= */
+
+.btn-sair {
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.45);
+
+    background: transparent;
+
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-sair:hover {
+
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.responsavel-container {
+
+    width: min(730px, 92%);
+
+    margin:
+        32px auto 60px;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.introducao {
+
+    margin-bottom: 20px;
+}
+
+.etiqueta {
+
+    display: block;
+
+    color: #009653;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+}
+
+.introducao h2 {
+
+    font-size: 25px;
+
+    color: #063b2d;
+
+    margin-bottom: 6px;
+}
+
+.introducao p {
+
+    color: #687d75;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CARD DA ROTA
+========================================================= */
+
+.rota-card {
+
+    background: white;
+
+    border:
+        1px solid
+        #dfeae5;
+
+    border-radius: 17px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 7px 22px
+        rgba(0, 60, 40, 0.06);
+}
+
+
+/* =========================================================
+   CABEÇALHO DA ROTA
+========================================================= */
+
+.rota-cabecalho {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.rota-label {
+
+    display: block;
+
+    color: #07934f;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.7px;
+
+    margin-bottom: 5px;
+}
+
+.rota-cabecalho h3 {
+
+    font-size: 21px;
+
+    color: #073b2d;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+.status.ativo {
+
+    background: #e3f7ec;
+
+    color: #07884b;
+}
+
+
+/* =========================================================
+   SEPARADOR
+========================================================= */
+
+.separador {
+
+    height: 1px;
+
+    background: #e5eee9;
+
+    margin: 17px 0;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES PRINCIPAIS
+========================================================= */
+
+.informacoes-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 13px;
+}
+
+.informacao-box {
+
+    min-height: 65px;
+
+    background: #f7faf9;
+
+    border:
+        1px solid
+        #e2ebe7;
+
+    border-radius: 11px;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.informacao-icone {
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    background: #e8f8f0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+.informacao-box span {
+
+    display: block;
+
+    color: #758780;
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.informacao-box strong {
+
+    display: block;
+
+    color: #173f33;
+
+    font-size: 13px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   BLOCOS DE INFORMAÇÃO
+========================================================= */
+
+.bloco-informacao {
+
+    background: #f7faf9;
+
+    border:
+        1px solid
+        #e2ebe7;
+
+    border-radius: 11px;
+
+    padding: 14px;
+
+    margin-top: 12px;
+}
+
+.bloco-titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #23483c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.bloco-icone {
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PARADAS
+========================================================= */
+
+.paradas {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.parada {
+
+    background: #e5f7ed;
+
+    color: #07884b;
+
+    border-radius: 20px;
+
+    padding: 7px 10px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   DIAS
+========================================================= */
+
+.dias {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+.dias span {
+
+    background: #e5f7ed;
+
+    color: #07884b;
+
+    border-radius: 20px;
+
+    padding: 6px 9px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   HORÁRIOS
+========================================================= */
+
+.horarios {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.horario {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: white;
+
+    border:
+        1px solid
+        #dfeae5;
+
+    border-radius: 8px;
+
+    padding: 9px 10px;
+
+    font-size: 12px;
+
+    color: #61766d;
+}
+
+.horario strong {
+
+    color: #173f33;
+
+    font-size: 13px;
+}
+
+.seta-horario {
+
+    color: #0a9955;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   INFORMAÇÃO ADICIONAL
+========================================================= */
+
+.informacao-adicional {
+
+    color: #506860;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   AÇÕES
+========================================================= */
+
+.acoes {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    border-top:
+        1px solid
+        #e5eee9;
+
+    margin-top: 18px;
+
+    padding-top: 15px;
+}
+
+.acoes button {
+
+    border-radius: 9px;
+
+    padding: 10px 14px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* EDITAR */
+
+.btn-editar {
+
+    border:
+        1px solid
+        #c3e5d3;
+
+    background: #eaf8f1;
+
+    color: #07884b;
+}
+
+.btn-editar:hover {
+
+    background: #dcf3e6;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* EXCLUIR */
+
+.btn-excluir {
+
+    border:
+        1px solid
+        #f1cccc;
+
+    background: #fff7f7;
+
+    color: #d43838;
+}
+
+.btn-excluir:hover {
+
+    background: #ffebeb;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   MODAIS
+========================================================= */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 35, 25, 0.45);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+.modal-overlay.aberto {
+
+    display: flex;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+
+    width: min(390px, 100%);
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.18);
+}
+
+.modal-icone {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.modal h3 {
+
+    color: #173f33;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.modal p {
+
+    color: #6d8179;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   AÇÕES DO MODAL
+========================================================= */
+
+.modal-acoes {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.modal-acoes button {
+
+    flex: 1;
+
+    min-height: 42px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-cancelar {
+
+    border:
+        1px solid
+        #dbe6e1;
+
+    background: white;
+
+    color: #62756e;
+}
+
+.btn-confirmar-exclusao {
+
+    border: none;
+
+    background: #d43838;
+
+    color: white;
+}
+
+
+/* =========================================================
+   MODAL DE EDIÇÃO
+========================================================= */
+
+.modal-edicao {
+
+    width: min(650px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    text-align: left;
+
+    padding: 25px;
+}
+
+
+/* =========================================================
+   TOPO DO MODAL DE EDIÇÃO
+========================================================= */
+
+.modal-topo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid
+        #e3ebe7;
+
+    margin-bottom: 18px;
+}
+
+.modal-topo .rota-label {
+
+    margin-bottom: 5px;
+}
+
+.modal-topo h3 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #073b2d;
+}
+
+
+/* FECHAR */
+
+.btn-fechar-edicao {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f0f5f2;
+
+    color: #526b62;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+.btn-fechar-edicao:hover {
+
+    background: #e2ece7;
+
+    color: #d43838;
+}
+
+
+/* =========================================================
+   FORMULÁRIO DE EDIÇÃO
+========================================================= */
+
+.form-edicao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.campo-edicao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.campo-edicao label {
+
+    color: #23483c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.campo-edicao input,
+.campo-edicao select,
+.campo-edicao textarea {
+
+    width: 100%;
+
+    border:
+        1px solid
+        #d6e4de;
+
+    border-radius: 9px;
+
+    background: #f9fbfa;
+
+    color: #173f33;
+
+    padding: 11px 12px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo-edicao input,
+.campo-edicao select {
+
+    height: 44px;
+}
+
+.campo-edicao textarea {
+
+    resize: vertical;
+
+    min-height: 90px;
+
+    line-height: 1.5;
+}
+
+.campo-edicao input:focus,
+.campo-edicao select:focus,
+.campo-edicao textarea:focus {
+
+    border-color: #08a85b;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8, 168, 91, 0.08);
+}
+
+
+/* =========================================================
+   PARADAS NO MODAL
+========================================================= */
+
+.lista-paradas-edicao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.linha-parada-edicao {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.input-parada-edicao {
+
+    flex: 1;
+}
+
+.btn-remover-campo {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid
+        #efcccc;
+
+    border-radius: 8px;
+
+    background: #fff7f7;
+
+    color: #d43838;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-remover-campo:hover {
+
+    background: #ffeaea;
+}
+
+
+/* =========================================================
+   BOTÃO ADICIONAR CAMPO
+========================================================= */
+
+.btn-adicionar-campo {
+
+    align-self: flex-start;
+
+    border:
+        1px solid
+        #bfe2d0;
+
+    background: #eaf8f1;
+
+    color: #07884b;
+
+    padding: 8px 11px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-adicionar-campo:hover {
+
+    background: #dcf3e6;
+}
+
+
+/* =========================================================
+   DIAS NO MODAL
+========================================================= */
+
+.dias-edicao {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.dia-checkbox {
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.dia-checkbox input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.dia-checkbox span {
+
+    display: block;
+
+    padding: 8px 10px;
+
+    border:
+        1px solid
+        #d6e4de;
+
+    border-radius: 20px;
+
+    background: #f8fbf9;
+
+    color: #60756d;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.dia-checkbox input:checked + span {
+
+    background: #e3f7ec;
+
+    border-color: #b8dfca;
+
+    color: #07884b;
+}
+
+
+/* =========================================================
+   HORÁRIOS NO MODAL
+========================================================= */
+
+.titulo-horarios-edicao {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.lista-horarios-edicao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.linha-horario-edicao {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 40px;
+
+    gap: 8px;
+
+    align-items: end;
+
+    padding: 11px;
+
+    border:
+        1px solid
+        #e0ebe6;
+
+    background: #f8fbf9;
+
+    border-radius: 10px;
+}
+
+.linha-horario-edicao > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.linha-horario-edicao label {
+
+    font-size: 10px;
+
+    color: #71857c;
+
+    font-weight: bold;
+}
+
+.linha-horario-edicao input {
+
+    background: white;
+}
+
+
+/* =========================================================
+   BOTÃO SALVAR EDIÇÃO
+========================================================= */
+
+.btn-salvar-edicao {
+
+    flex: 1;
+
+    min-height: 42px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07894d,
+            #0caf5d
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-salvar-edicao:hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 5px 14px
+        rgba(0, 137, 77, 0.20);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .header-responsavel {
+
+        padding: 0 14px;
+    }
+
+    .responsavel-container {
+
+        width: 94%;
+
+        margin-top: 22px;
+    }
+
+    .introducao h2 {
+
+        font-size: 22px;
+    }
+
+    .rota-card {
+
+        padding: 18px;
+    }
+
+    .informacoes-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+
+        flex-direction: column;
+    }
+
+    .acoes button {
+
+        width: 100%;
+    }
+
+    .modal-edicao {
+
+        padding: 20px;
+
+        max-height: 94vh;
+    }
+
+    .linha-horario-edicao {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .linha-horario-edicao .btn-remover-campo {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+    .titulo-horarios-edicao {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .titulo-horarios-edicao
+    .btn-adicionar-campo {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .header-logo {
+
+        display: none;
+    }
+
+    .header-titulo h1 {
+
+        font-size: 18px;
+    }
+
+    .header-titulo span {
+
+        font-size: 10px;
+    }
+
+    .btn-sair {
+
+        padding: 8px 12px;
+    }
+
+    .rota-cabecalho {
+
+        flex-direction: column;
+    }
+
+    .status {
+
+        align-self: flex-start;
+    }
+
+    .horario {
+
+        flex-wrap: wrap;
+    }
+
+    .modal-acoes {
+
+        flex-direction: column;
+    }
+
+    .dias-edicao {
+
+        gap: 5px;
+    }
+
+    .dia-checkbox span {
+
+        padding: 7px 8px;
+    }
+
+    .linha-horario-edicao {
+
+        grid-template-columns: 1fr;
+    }
+
+    .linha-horario-edicao .btn-remover-campo {
+
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+}
